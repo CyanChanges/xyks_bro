@@ -1,0 +1,5 @@
+{
+  "compilerOptions": {
+    "types": ["./frida.d.ts"]
+  }
+}

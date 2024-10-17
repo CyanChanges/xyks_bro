@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Poetry (xyks_bro)" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (xyks_bro)" project-jdk-type="Python SDK" />
 </project>
