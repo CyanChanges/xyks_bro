@@ -44,10 +44,10 @@ function hook(soName = '') {
                 const path_ptr = args[0];
                 if (path_ptr !== undefined && path_ptr != null) {
                     const path = path_ptr.readCString();
-                    if (path.indexOf(soName) >= 0) {
+                    if (path !== '' && path.indexOf(soName) !== -1) {
                         sendLog("trace", `loading library ${path}`)
                         const interceptor = hook_dlsym();
-                        // auto detach after 3 seconds
+                        // auto detach after 200ms
                         setTimeout(() => interceptor.detach(), 200)
                     }
                 }
@@ -71,6 +71,6 @@ function sendLog(level, message) {
 
 setImmediate((library) => {
     const interceptor = hook(library)
-    // auto detach after 3 seconds, probably user rm'd the so
-    setTimeout(() => interceptor.detach(), 3000)
+    // auto detach after 1 second, probably user rm'd the so
+    setTimeout(() => interceptor.detach(), 1000)
 }, "libmsaoaidsec.so")
