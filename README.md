@@ -1,4 +1,8 @@
 # 小猿<神>
+All rights reserved by Cyan Changes (c) 2024.
+You are not allowed to use any content of this repository in yours,
+unless you have explict authorization.
+
 <找Hook接>口算<法和逆向反编译混淆>, 小子
 
 [中文README](./README_cn.md)
